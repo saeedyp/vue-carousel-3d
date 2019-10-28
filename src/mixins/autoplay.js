@@ -19,7 +19,7 @@ const autoplay = {
          */
         autoplayHoverPause: {
             type: Boolean,
-            default: true
+            default: false
         }
     },
     data () {

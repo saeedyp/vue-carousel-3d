@@ -240,7 +240,9 @@
              */
             goNext () {
                 if (this.isNextPossible) {
+                    this.pauseAutoplay()
                     this.isLastSlide ? this.goSlide(0) : this.goSlide(this.currentIndex + 1)
+                    this.startAutoplay()
                 }
             },
             /**
@@ -248,7 +250,9 @@
              */
             goPrev () {
                 if (this.isPrevPossible) {
+                    this.pauseAutoplay()
                     this.isFirstSlide ? this.goSlide(this.total - 1) : this.goSlide(this.currentIndex - 1)
+                    this.startAutoplay()
                 }
             },
             /**
