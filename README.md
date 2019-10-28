@@ -8,7 +8,7 @@
 [![Latest Stable Version](https://img.shields.io/npm/v/vue-carousel-3d.svg)](https://www.npmjs.com/package/vue-carousel-3d)
 
 # My custom forked features
-- option for disable touch control - (soon)
+- option for disable touch control (canTouch -> default:true)
 - pause control button - (soon)
 
 **Feel free to submit issues and feature requests [here](https://github.com/wlada/vue-carousel-3d/issues)**.
