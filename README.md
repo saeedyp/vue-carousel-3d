@@ -10,7 +10,6 @@
 # My custom forked features
 - option for disable touch control (canTouch -> default:true)
 - Next , Prev refresh autoplay timer fix
-- pause control button - (soon)
 
 **Feel free to submit issues and feature requests [here](https://github.com/wlada/vue-carousel-3d/issues)**.
 
