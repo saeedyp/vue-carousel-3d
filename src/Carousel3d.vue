@@ -132,7 +132,8 @@
                 dragOffset: 0,
                 dragStartX: 0,
                 mousedown: false,
-                zIndex: 998
+                zIndex: 998,
+                NoAnimation: false
             }
         },
         mixins: [
@@ -274,6 +275,11 @@
                 this.$emit('before-slide-change', this.currentIndex)
 
                 setTimeout(() => this.animationEnd(), this.animationSpeed)
+            },
+            goSlideNoAnimate (index) {
+                this.NoAnimation = true
+                this.currentIndex = (index < 0 || index > this.total - 1) ? 0 : index
+                this.NoAnimation = false
             },
             /**
              * Go to slide far slide
