@@ -132,8 +132,7 @@
                 dragOffset: 0,
                 dragStartX: 0,
                 mousedown: false,
-                zIndex: 998,
-                NoAnimation: false
+                zIndex: 998
             }
         },
         mixins: [
@@ -276,10 +275,19 @@
 
                 setTimeout(() => this.animationEnd(), this.animationSpeed)
             },
-            goSlideNoAnimate (index) {
-                this.NoAnimation = true
+            goSlideCustom (index) {
                 this.currentIndex = (index < 0 || index > this.total - 1) ? 0 : index
-                this.NoAnimation = false
+
+                if (this.isLastSlide) {
+                    if (this.onLastSlide !== noop) {
+                        console.warn('onLastSlide deprecated, please use @last-slide')
+                    }
+                    this.onLastSlide(this.currentIndex)
+
+                    this.$emit('last-slide', this.currentIndex)
+                }
+
+                setTimeout(() => this.animationEnd(), this.animationSpeed)
             },
             /**
              * Go to slide far slide

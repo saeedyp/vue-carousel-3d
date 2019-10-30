@@ -49,23 +49,14 @@
                         }
                     }
                 }
-
-                if (this.parent.NoAnimation) {
-                    return Object.assign(styles, {
-                        'border-width': this.parent.border + 'px',
-                        'width': this.parent.slideWidth + 'px',
-                        'height': this.parent.slideHeight + 'px'
-                    })
-                } else {
-                    return Object.assign(styles, {
-                        'border-width': this.parent.border + 'px',
-                        'width': this.parent.slideWidth + 'px',
-                        'height': this.parent.slideHeight + 'px',
-                        'transition': ' transform ' + this.parent.animationSpeed + 'ms, ' +
-                            '               opacity ' + this.parent.animationSpeed + 'ms, ' +
-                            '               visibility ' + this.parent.animationSpeed + 'ms'
-                    })
-                }
+                return Object.assign(styles, {
+                    'border-width': this.parent.border + 'px',
+                    'width': this.parent.slideWidth + 'px',
+                    'height': this.parent.slideHeight + 'px',
+                    'transition': ' transform ' + this.parent.animationSpeed + 'ms, ' +
+                        '               opacity ' + this.parent.animationSpeed + 'ms, ' +
+                        '               visibility ' + this.parent.animationSpeed + 'ms'
+                })
             },
             computedClasses () {
                 return {
