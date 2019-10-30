@@ -10,7 +10,7 @@
 # My custom forked features
 - option for disable touch control (canTouch -> default:true)
 - Next , Prev refresh autoplay timer fix
-- Add no animation goSlide fuction
+- custom goSlide fuction
 
 **Feel free to submit issues and feature requests [here](https://github.com/wlada/vue-carousel-3d/issues)**.
 
